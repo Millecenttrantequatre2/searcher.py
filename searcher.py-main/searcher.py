@@ -40,16 +40,16 @@ def main():
      /$$$$$$ /$$$$$$|  $$$$$$/      | $$ 
     |______/|______/ \______/       |__/         
                                        """))
-    term = input(Colorate.Horizontal(Colors.red_to_green, "que veut-tu chercher ?=> "))
+    term = input(Colorate.Horizontal(Colors.red_to_green, "Que veux-tu chercher ? ?=> "))
 
     while term.lower() != 'q':
         results = search_files(term, database_folder)
         if results:
-            print(Colorate.Horizontal(Colors.white_to_blue, "Résultats Trouver :"))
+            print(Colorate.Horizontal(Colors.white_to_blue, "Résultats trouvés :"))
             for result in results:
                 print(result)
         else:
-            print(Colorate.Horizontal(Colors.white_to_blue, "Aucun Résultats n'as étais trouver"))
+            print(Colorate.Horizontal(Colors.white_to_blue, "Aucun résultat n'a été trouvé."))
 
             
 if __name__ == "__main__":
